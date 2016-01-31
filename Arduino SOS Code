@@ -1,0 +1,32 @@
+//This is the code for Arduino SOS project with a LED and is very similar to the Arduino Blink Project.
+//I've solved the project by adding 2 while-loops instead of repeat the code over and over again.
+//Of course you can do it without any loops and you can change the delay value as you like it.
+
+void setup() //The code in this section will only be run once, just when the Arduino starts.
+{
+pinMode(13, OUTPUT);
+}
+
+void loop() // This section is for your main code, this code will run repeatedly, again and again.
+{
+  int longCounter = 0;
+  int shortCounter = 0;
+  
+  while(longCounter < 3)
+  {
+    digitalWrite(13, HIGH); // Three long blinks with counter
+    delay(1200);  
+    digitalWrite(13, LOW);    
+    delay(200);
+    longCounter++;
+  }
+  
+  while(shortCounter < 3)
+  {
+    digitalWrite(13, HIGH); // Three short blinks with counter
+    delay(350);  
+    digitalWrite(13, LOW);    
+    delay(200); 
+    shortCounter++;
+  }
+}
