@@ -9,8 +9,8 @@ pinMode(13, OUTPUT);
 
 void loop() // This section is for your main code, this code will run repeatedly, again and again.
 {
-  int longCounter = 0;
-  int shortCounter = 0;
+  int longCounter = 0; //Counter for the each long period of time the LED will me ON
+  int shortCounter = 0; // Counter for each short period of time the LED will be ON
   
   while(longCounter < 3)
   {
